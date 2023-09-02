@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>HTML5</title>
+    </head>
+    <body>
+        <form>
+            <input type="month" id="inp-month"><br>
+            <input type="button" value="show month" onclick="showMonth()">
+        </form>
+        <p id="demo"></p>
+
+        <script>
+            function showMonth(){
+                document.getElementById("demo").innerHTML = "year-month: " + document.getElementById("inp-month").value;
+            }
+        </script>
+    </body>
+</html>

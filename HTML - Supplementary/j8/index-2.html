@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>HTML5</title>
+    </head>
+    <body>
+        <canvas id="canvas-tag" width="600" height="300" style="border:2px solid #000000">مرورگر شما بروز نیست</canvas>
+
+        <script>
+            var canv = document.getElementById("canvas-tag");
+            var ctx = canv.getContext("2d");
+            var grd = ctx.createRadialGradient(300, 150, 0, 300, 150, 300);
+            grd.addColorStop(0, "green");
+            grd.addColorStop(1, "white");
+            ctx.fillStyle = grd;
+            ctx.fillRect(0, 0, 600, 300);
+        </script>
+    </body>
+</html>

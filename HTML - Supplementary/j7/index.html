@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>HTML5</title>
+        <script>
+            function dragStart(ev){
+                ev.dataTransfer.setData("Text", ev.target.id);
+            }
+
+            function dragFinish(ev){
+                ev.preventDefault();
+            }
+
+            function dropStart(ev){
+                var data = ev.dataTransfer.getData("Text");
+                ev.target.appendChild(document.getElementById(data));
+                ev.preventDefault;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="div1" style="width:700; height:400; border:2px; border-style:solid"
+        ondrop="dropStart(event)" ondragover="dragFinish(event)"></div>
+
+        <div style="height:100"></div>
+
+        <img id="img1" src="./image/ferrari-360-wallpapers.jpg" width="600" height="350" draggable="true"
+        ondragstart="dragStart(event)">
+
+    </body>
+</html>

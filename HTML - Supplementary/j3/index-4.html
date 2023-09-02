@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>HTML5</title>
+    </head>
+    <body>
+        <form>
+            <input type="email" id="inp-email"><br>
+            <input type="button" value="show email" onclick="showEmail()">
+        </form>
+        <p id="demo"></p>
+
+        <script>
+            function showEmail(){
+                document.getElementById("demo").innerHTML = "Your email address: " + document.getElementById("inp-email").value;
+            }
+        </script>
+    </body>
+</html>

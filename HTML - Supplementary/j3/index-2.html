@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>HTML5</title>
+    </head>
+    <body>
+        <form>
+            <input type="color" id="inp-color"><br>
+            <input type="button" value="set color" onclick="setColor()">
+        </form>
+        <p id="demo">HTML5</p>
+
+        <script>
+            function setColor(){
+                document.getElementById("demo").style.backgroundColor = document.getElementById("inp-color").value;
+            }
+        </script>
+    </body>
+</html>

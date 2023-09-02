@@ -1,0 +1,14 @@
+p{
+	background-color: yellow;
+	color: red !important;
+	font-size: 24pt;
+}   /* Selector */
+
+.p1{
+	background-color: lime;
+	color: red;
+}   /* Class */
+
+#p1{
+	color: black;
+}   /* ID */

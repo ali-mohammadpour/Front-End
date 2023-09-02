@@ -1,0 +1,48 @@
+<!-- "form" Tags and Inputs: -->
+
+<html>
+	<head>
+	</head>
+	<body>
+		<div style="width:35%; height:auto; background-color:rgb(232,255,252)">
+			<form action="serverFile.php" method="get">
+				<fieldset>
+					<legend>
+						<b>Personal Information</b>
+					</legend>
+
+					First name <input type="text" id="txtFirstName" name="txtFirstNameSend">&nbsp;&nbsp;
+					Last name <input type="text" id="txtLastName" name="txtLastNameSend"><br>
+					<input type="button" value="click me"><br>
+					<input type="checkbox" value="checked" name="checkbox_">Remember me<br>
+					<input type="radio" name="genderSend" value="M">Male
+					<input type="radio" name="genderSend" value="F">Female<br>
+					Password <input type="password" id="pwdpass"><br><br>
+					<textarea cols="30" rows="10"></textarea><br><br>
+					<select>
+						<option value="1">Tehran</option>
+						<option value="2">Esfahan</option>
+						<option value="3">Shiraz</option>
+					</select>
+					<br><br>
+					<input type="text" id="txtBrowsers" list="browsers">
+						<datalist id="browsers">
+							<option value="Chrome">
+							<option value="Mozilla">
+							<option value="Opera">
+						</datalist>
+					</input>
+					<br><br>
+					<input type="number" min="1" max="10"></input><br><br>
+					<input type="color"></input><br><br>
+					<input type="date"></input><br><br>
+					&nbsp;1&nbsp;&nbsp;2<br>
+					<input type="range" min="1" max="10"></input><br><br>
+					<input type="reset" value="reset">
+					<input type="submit" value="send">
+
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>

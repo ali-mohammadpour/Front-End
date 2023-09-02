@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>HTML5</title>
+    </head>
+    <body>
+        <form>
+            <input type="time" id="inp-time"><br>
+            <input type="button" value="show time" onclick="showTime()">
+        </form>
+        <p id="demo"></p>
+
+        <script>
+            function showTime(){
+                document.getElementById("demo").innerHTML = "Time is: " + document.getElementById("inp-time").value;
+            }
+        </script>
+    </body>
+</html>

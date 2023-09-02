@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>HTML5</title>
+    </head>
+    <body>
+        <form>
+            <input type="date" id="inp-date"><br>
+            <input type="button" value="set date" onclick="setDate()">
+        </form>
+        <p id="demo"></p>
+
+        <script>
+            function setDate(){
+                document.getElementById("demo").innerHTML = "Record time: " + document.getElementById("inp-date").value;
+            }
+        </script>
+    </body>
+</html>

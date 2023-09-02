@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>HTML5</title>
+    </head>
+    <body>
+        <form method="post">
+            <input type="text" id="text"><br>
+            <input type="email" id="email"><br>
+
+            <input type="submit" formaction="data.php" formenctype="application/x-www-form-urlencoded">
+            <!-- charachter ha ro encrypt va faseleha ro be "+" tabdil mikone. -->
+            <input type="submit" formaction="data.php" formenctype="multipart/form-data">
+            <!-- hich kudum az charachter ha ro encode ya encrypt nemikone. -->
+            <input type="submit" formaction="data.php" formenctype="text/plain">
+            <!-- etelaat to eynan ersal mikone vali faseleha ro be "+" tabdil mikone. -->
+        </form>
+    </body>
+</html>

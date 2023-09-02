@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>HTML5</title>
+    </head>
+    <body>
+        <canvas id="canvas-tag" width="600" height="300" style="border:2px solid #000000">مرورگر شما بروز نیست</canvas>
+
+        <script>
+            var canv = document.getElementById("canvas-tag");
+            var ctx = canv.getContext("2d");
+            ctx.font = "30px tahoma";
+            ctx.fillText("Front-end", 75, 75);
+            ctx.strokeText("Front-end", 75, 230);
+            ctx.stroke();
+        </script>
+    </body>
+</html>

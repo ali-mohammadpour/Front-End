@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>HTML5</title>
+    </head>
+    <body>
+        <form>
+            <input type="url" id="inp-url"><br>
+            <input type="button" value="show url" onclick="showUrl()">
+        </form>
+        <p id="demo"></p>
+
+        <script>
+            function showUrl(){
+                document.getElementById("demo").innerHTML = document.getElementById("inp-url").value;
+            }
+        </script>
+    </body>
+</html>
