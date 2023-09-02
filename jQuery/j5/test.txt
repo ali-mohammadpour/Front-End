@@ -1,0 +1,2 @@
+<h1>Welcome</h1>
+<span style="color:red">This is ajax content</span>

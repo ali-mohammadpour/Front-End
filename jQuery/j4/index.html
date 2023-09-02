@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <style>
+            #d1,
+            .d1{
+                width: 500px;
+                height: 500px;
+                background-color: beige;
+            }
+
+            #d2,
+            .d2{
+                width: 400px;
+                height: 400px;
+                background-color: orange;
+            }
+
+            #d3,
+            .d3{
+                width: 300px;
+                height: 300px;
+                background-color: pink;
+            }
+
+            #p1,
+            .p1{
+                width: 250px;
+                height: 200px;
+                background-color: silver;
+            }
+        </style>
+        <script src="jQuery.js"></script>
+        <script>
+            $(document).ready(() => {
+
+                $('#btn-parent').click(() => $('#link1').parent().css({backgroundColor: "green", color: "white"}) )
+
+                $('#btn-parents').click(() => $('#link1').parents().css({backgroundColor: "green", color: "white"}) )
+
+                $('#btn-parents_until').click(() => $('#link1').parentsUntil('#d2').css({backgroundColor: "green", color: "white"}) )
+                // ta zamani ke beresi be 'd2' va na khode 'd2'.
+
+                $('#btn-closest').click(() => $('#link1').closest('#d2').css({backgroundColor: "green", color: "white"}) )
+
+                $('a').click((e) => {
+                    e.preventDefault()
+                    $(this).closest('.d2').css({backgroundColor: "green", color: "white"})   // chera kar nakard?
+                })
+
+                $('#btn-children').click(() => $('#d1').children().css({backgroundColor: "green", color: "white"}) )
+                // faghat ta yek sath payintar.
+
+                $('#btn-find').click(() => $('#d1').find('div').css({backgroundColor: "green", color: "white"}) )
+                // ta chand sath payintar.
+
+                $('#btn-siblings').click(() => $('#link1').siblings().css('color', 'red') )
+                // hamzadhash be joz khodesh.
+
+                $('#btn-next').click(() => $('#link1').next().css('color', 'red') )
+                // onsori ke hamzade 'link1' hast va bad az 'link1' gharar gerefte.
+
+                $('#btn-prev').click(() => $('#link3').prev().prev().css('color', 'red') )
+
+                $('#btn-next_all').click(() => $('#link1').nextAll().css('color', 'red') )
+
+                $('#btn-prev_all').click(() => $('#link1').prevAll().css('color', 'red') )
+
+                $('#btn-next_until').click(() => $('#link1').nextUntil('#link5').css('color', 'red') )
+                // ta 'link5' va na khode 'link5'.
+
+                $('#btn-prev_until').click(() => $('#link6').prevUntil('#link0').css('color', 'red') )
+
+                // $('#btn-first').click(() => $('a:first').css('color', 'red') )
+                $('#btn-first').click(() => $('a').first().css('color', 'red') )
+
+                $('#btn-last').click(() => $('#p1').find('a').last().css('color', 'red') )
+
+                $('#btn-eq').click(() => $('a').eq(4).css('color', 'red') )   // indexe 4.
+
+                // $('#btn-filter').click(() => $('a:odd').css('color', 'red') )   // Psudo class
+                $('#btn-filter').click(() => $('a').filter('.aa').css('color', 'red') )
+
+                $('#btn-not').click(() => $('a').not('.aa').css('color', 'red') )
+
+            })
+        </script>
+    </head>
+    <body>
+        <!-- DOM methods -->
+        <input type="button" id="btn-parent" value="parent">
+        <input type="button" id="btn-parents" value="parents">
+        <input type="button" id="btn-parents_until" value="parents until">
+        <input type="button" id="btn-closest" value="closest">
+        <input type="button" id="btn-children" value="children">
+        <input type="button" id="btn-find" value="find">
+        <input type="button" id="btn-siblings" value="siblings">
+        <input type="button" id="btn-next" value="next">
+        <input type="button" id="btn-prev" value="prev prev">
+        <input type="button" id="btn-next_all" value="next all">
+        <input type="button" id="btn-prev_all" value="prev all">
+        <input type="button" id="btn-next_until" value="next until">
+        <input type="button" id="btn-prev_until" value="prev until">
+
+        <!-- Traversing methods -->
+        <input type="button" id="btn-first" value="first">
+        <input type="button" id="btn-last" value="last">
+        <input type="button" id="btn-eq" value="eq">
+        <input type="button" id="btn-filter" value="filter">
+        <input type="button" id="btn-not" value="not">
+
+        <div id="d1">
+            d1
+            <div id="d2">
+                d2
+                <div id="d3">
+                    d3
+                    <p id="p1">
+                        p1<br>
+                        <a href="#" id="link0">Click here 0</a>
+                        <a href="#" id="link1" class="aa">Click here 1</a>
+                        <a href="#" id="link2">Click here 2</a>
+                        <a href="#" id="link3">Click here 3</a>
+                        <a href="#" id="link4" class="aa">Click here 4</a>
+                        <a href="#" id="link5">Click here 5</a>
+                        <a href="#" id="link6">Click here 6</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d1">
+            d1
+            <div class="d2">
+                d2
+                <div class="d3">
+                    d3
+                    <p class="p1">
+                        p1
+                        <a href="#">Click here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d1">
+            d1
+            <div class="d2">
+                d2
+                <div class="d3">
+                    d3
+                    <p class="p1">
+                        p1
+                        <a href="#">Click here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

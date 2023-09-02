@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <style>
+            p{
+                background-color: yellow;
+                color: red;
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+        <script src="jQuery.js"></script>
+        <script>
+            $.noConflict()
+            jQuery(document).ready(function($){
+
+                /*
+                $('#btn-hide').click(function(){
+                    $('.p1').hide()
+                })
+                */
+
+                /*
+                $('p').mouseenter(function(){
+                $(this).hide()
+                })
+                */
+
+                /*
+                $('#btn-hide').mouseenter(function(){
+                    $('.p1').hide()
+                })
+                */
+
+                /*
+                $('#btn-hide').mousedown(function(){
+                    $('.p1').hide()
+                })
+                */
+
+                /*
+                $('#btn-hide').hover(function(){
+                    $('.p1').hide()
+                }, function(){
+                    $('.p1').show()
+                })
+                */
+
+                /*
+                $('#txt-number').focus(function(){
+                    $(this).css('background-color', 'green')
+                })
+                $('#txt-number').blur(function(){
+                    $(this).css('background-color', 'white')
+                })
+                */
+
+                var person = {
+                    firstName: "Ali",
+                    lastName: "Mohammadpour",
+                    age: 30
+                }
+
+                $('#btn-hide').on(
+                    {
+                        click: () => $('.p1').hide(),
+                        mouseenter: () => $(this).css('background-color', 'green'),
+                        mouseleave: () => $(this).css('background-color', 'white')
+                    }
+                )
+
+            })
+        </script>
+    </head>
+    <body>
+        <input type="button" id="btn-hide" value="hide">
+        <input type="text" id="txt-number">
+        <p class="p1">salam 1</p>
+        <p class="p1">salam 2</p>
+        <p class="p1">salam 3</p>
+        <p id="p2">salam 4</p>
+    </body>
+</html>

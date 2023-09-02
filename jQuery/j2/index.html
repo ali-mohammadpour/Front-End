@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <style>
+            p{
+                width: 200px;
+                height: 200px;
+                background-color: yellow;
+                color: red;
+                position: relative;
+            }
+        </style>
+        <script src="jQuery.js"></script>
+
+        <script>
+            $(document).ready(function(){
+
+                $('#btn-hide').click(function(){
+                    $('p').hide(1000, () => alert('finished'))   // chon do ta tage p darim, do bar amaliyate hide anjam mishe.
+                })
+
+                $('#btn-show').click(function(){
+                    $('p').show('fast')
+                })
+
+                $('#btn-toggle').click(function(){
+                    $('p').toggle('fast')
+                })
+
+                $('#btn-fade_out').click(function(){
+                    $('p').fadeOut(1000)
+                })
+
+                $('#btn-fade_in').click(function(){
+                    $('p').fadeIn(1000)
+                })
+
+                $('#btn-fade_toggle').click(function(){
+                    $('p').fadeToggle(1000)
+                })
+
+                $('#btn-fade_to').click(function(){
+                    $('p').fadeTo(200, 0.2)
+                })
+
+                $('#btn-slide_up').click(function(){
+                    $('p').slideUp(1000)
+                })
+
+                $('#btn-slide_down').click(function(){
+                    $('p').slideDown(1000)
+                })
+
+                $('#btn-slide_toggle').click(function(){
+                    $('p').slideToggle(1000)
+                })
+
+                $('#btn-animate').click(function(){
+                    $('#p1').animate({left: "200px", top: "300px", fontSize: "48pt", width: "400px"}, 5000)
+
+                    .animate({left: "1000px", top: -"200px", fontSize: "24pt", width: "400px"}, 200)   // Method chaining.
+
+                    .animate({left: "200px", top: "100px", fontSize: "12pt", width: "400px"}, 1000)
+
+                    .animate({left: "200px", top: "100px", fontSize: "12pt", width: "+=500px", margin: "10px"}, 1000 )
+                })
+
+                $('#btn-stop').click(function(){
+                    $('#p1').stop(false, true)
+                })
+                // halate pishfarz =>>> stop(false, false) = stop(faghat animatione jari stop shavad, be halate nahayish nare)
+
+            })
+        </script>
+    </head>
+    <body>
+        <input type="button" id="btn-hide" value="hide">
+        <input type="button" id="btn-show" value="show">
+        <input type="button" id="btn-toggle" value="toggle">   <!-- 'toggle' be manaye switch kardan beyne do onsor hast -->
+        <input type="button" id="btn-fade_out" value="fade out">
+        <input type="button" id="btn-fade_in" value="fade in">
+        <input type="button" id="btn-fade_toggle" value="fade toggle">
+        <input type="button" id="btn-fade_to" value="fade to">
+        <input type="button" id="btn-slide_up" value="slide up">
+        <input type="button" id="btn-slide_down" value="slide down">
+        <input type="button" id="btn-slide_toggle" value="slide toggle">
+        <input type="button" id="btn-animate" value="animate">
+        <input type="button" id="btn-stop" value="stop">
+
+        <p id="p1">salam 1</p>
+        <p>salam 2</p>
+    </body>
+</html>

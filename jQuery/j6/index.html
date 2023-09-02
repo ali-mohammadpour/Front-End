@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <style>
+            .tt{
+                position: fixed;
+                display: none;
+            }
+
+            .triangle{
+                width: 15px;
+                height: 15px;
+                top: 5px;
+                transform: rotate(45deg);
+                background-color: rgb(51, 51, 51);
+                position: relative;
+                margin: 0 auto 0;
+            }
+
+            .tooltip{
+                width: auto;
+                min-width: 75px;
+                height: 20px;
+                color: white;
+                background-color: rgb(51, 51, 51);
+                z-index: 5;
+                position: relative;
+                text-align: center;
+                top: -7px;
+            }
+
+            a{
+                padding: 2px;
+            }
+        </style>
+        <script src="jQuery.js"></script>
+        <script src="pinkable.js"></script>
+        <script src="checkbox-plugin.js"></script>   <!-- chera adrese ghalate in ruye nomayeshe title tasir mizare? -->
+        <script src="tooltip.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('a').pink()
+                $('p').pink()
+                $('input[type="checkbox"]').mychk()
+                $('a').tooltip({color: 'gold'})
+            })
+        </script>
+    </head>
+    <body>
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <p>salam</p>
+        <a href="#" title="title 1">Link 1</a>
+        <a href="#" title="title 2">Link 2</a>
+        <a href="#" title="title 3">Link 3</a>
+        </body>
+</html>

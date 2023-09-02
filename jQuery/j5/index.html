@@ -1,0 +1,74 @@
+<!-- ? -->
+<html>
+    <head>
+        <script src="jQuery.js"></script>
+        <script>
+            $(document).ready(() => {
+
+                $('#btn-load').click(() => $('#p1').load('test.txt span') )
+
+                $('#txt1', '#txt2').keyup(() => {
+                    $.get('calc.php?num1='+$('#txt1').val()+'&num2='+$('#txt2').val(), (data, status) => {
+                        if(status == 'success'){
+                            $('#result').html(data)
+                        }
+                    })
+                })
+
+                $('#txt1', '#txt2').keyup(() => {
+                    $.post('calc.php', {num1: $('#txt1').val(), num2: $('#txt2').val()}, (data, status) => {
+                        if(status == 'success'){
+                            $('#result').html(data)
+                        }
+                    })
+                })
+
+                $('#txt1', '#txt2').keyup(() => {
+                    $.ajax(
+                        {
+                            url: 'calc.php',
+                            type: 'get',
+                            data: {
+                                num1: $('#txt1').val(),
+                                num2: $('#txt2').val()
+                            },
+                            success: response => $('#result').html(response),
+                            error: () => {}
+                        }
+                    )
+                })
+
+            })
+        </script>
+        <script>
+            /*
+            function calc(){
+                var xhr
+                if(window.XMLHttpRequest){
+                    xhr = new XMLHttpRequest
+                }else{
+                    xhr = new ActiveXObject('Microsoft.XMLHTTP')
+                }
+
+                xhr.onreadystagechange = () => {
+                    if(xhr.readyState == 4 && xhr.status == 200){
+                        document.getElementById('result').innerHTML = xhr.responseText
+                    }
+                }
+
+                var num1 = document.getElementById('txt1').value
+                var num2 = document.getElementById('txt2').value
+                xhr.open('get', 'calc.php?num1='+num1+'&num2='+num2, true)   // object ro misazim
+                xhr.send()
+            }
+            */
+        </script>
+    </head>
+    <body>
+        <input type="button" id="btn-load" value="load">
+        <p id="p1">salam</p>
+        <input type="text" id="txt1" onkeyup="calc()"> +
+        <input type="text" id="txt2" onkeyup="calc()"> =
+        <span id="result"></span>
+    </body>
+</html>

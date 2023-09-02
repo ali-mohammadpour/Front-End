@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <style>
+            p{
+                width: 300px;
+                height: 200px;
+                background-color: beige;
+            }
+
+            .blue{
+                color: blue;
+            }
+
+            .big{
+                font-size: 48pt;
+            }
+
+            .bold{
+                font-weight: bold;
+            }
+
+            .red{
+                color: red;
+            }
+
+            #p1{
+                border: 20px solid black;
+                padding: 30px;
+                margin: 50px;
+            }
+        </style>
+        <script src="jQuery.js"></script>
+        <script>
+            $(document).ready(() => {
+
+                $('#btn-show_html').click(() => alert($('#p1').html()) )   // haman 'innerHTML' dar JS.
+
+                $('#btn-set_html').click(() => $('#p1').html('This is a p tag.<br><a href="#">New link</a>') )
+
+                $('#btn-show_text').click(() => alert($('#p1').text()) )
+
+                $('#btn-set_text').click(() => $('#p1').text('This is new text!') )
+
+                $('#btn-show_input_value').click(() => alert($('#txt-firstname').val()) )
+
+                $('#btn-set_input_value').click(() => {
+                    var firstname = prompt('Enter your name: ')   // 'prompt()' khodesh input dare.
+                    $('#txt-firstname').val(firstname)
+                })
+
+                $('#btn-append').click(() => {
+                    var link1 = '<a href="#">Link1</a> '
+
+                    /*
+                    var link2 = $('<a></a>')
+                    // link2.href = '#'
+                    link2.attr('href', '#')
+                    link2.text('Link2')
+                    */
+                    var link2 = $('<a href="#">Link 2</a>')
+
+                    var link3 = document.createElement('a')
+                    link3.href = '#'
+                    link3.innerHTML = 'Link 3'
+
+                    $('#p1').append(link1, link2, link3)
+                })
+
+                $('#btn-prepend').click(() => {
+                    var link1 = '<a href="#">Link1</a> '
+
+                    var link2 = $('<a href="#">Link 2</a>')
+
+                    var link3 = document.createElement('a')
+                    link3.href = '#'
+                    link3.innerHTML = 'Link 3'
+
+                    $('#p1').prepend(link1, link2, link3)
+                })
+
+                $('#btn-before').click(() => {
+                    var link1 = '<a href="#">Link1</a> '
+
+                    var link2 = $('<a href="#">Link 2</a>')
+
+                    var link3 = document.createElement('a')
+                    link3.href = '#'
+                    link3.innerHTML = 'Link 3'
+
+                    $('#p1').before(link1, link2, link3)
+                })
+
+                $('#btn-after').click(() => {
+                    var link1 = '<a href="#">Link1</a> '
+
+                    var link2 = $('<a href="#">Link 2</a>')
+
+                    var link3 = document.createElement('a')
+                    link3.href = '#'
+                    link3.innerHTML = 'Link 3'
+
+                    $('#p1').after(link1, link2, link3)
+                })
+
+                $('#btn-attr').click(() => {
+                    $('#link1').attr(
+                        {
+                            href: "http://google.com",
+                            title: "Google"
+                        }
+                    )
+                })
+
+                $('#btn-remove_tag').click(() => $('p').remove('#p1') )
+
+                $('#btn-empty_tag').click(() => $('#p1').empty() )
+
+                $('#btn-add_class').click(() => $('#p1').addClass('big blue') )
+
+                $('#btn-remove_class').click(() => $('#p1').removeClass('big') )
+
+                $('#btn-toggle_class').click(() => $('#p1').toggleClass('red') )
+
+                $('#btn-has_class').click(() => {
+                    if($('#p1').hasClass('big')){
+                        $('#p1').removeClass('big')
+                    }else{
+                        $('#p1').addClass('bold')
+                    }
+                })
+
+                $('#btn-css').click(() => {
+                    $('#p1').css(
+                        {
+                            backgroundColor: "pink",
+                            color: "brown",
+                            width: "400px",
+                            height: "300px",
+                            fontSize: "48pt"
+                        }
+                    )
+                })
+
+                $('#btn-width').click(() => alert($('#p1').outerWidth(true)) )
+
+            })
+        </script>
+    </head>
+    <body>
+        <input type="button" id="btn-show_html" value="show html">
+        <input type="button" id="btn-set_html" value="set html">
+        <input type="button" id="btn-show_text" value="show text">
+        <input type="button" id="btn-set_text" value="set text">
+        <input type="button" id="btn-show_input_value" value="show input value">
+        <input type="button" id="btn-set_input_value" value="set input value">
+        <input type="text" id="txt-firstname">
+        <input type="button" id="btn-append" value="append">
+        <input type="button" id="btn-prepend" value="prepend">
+        <input type="button" id="btn-before" value="before">
+        <input type="button" id="btn-after" value="after">
+        <input type="button" id="btn-attr" value="attr">
+        <input type="button" id="btn-remove_tag" value="remove tag">
+        <input type="button" id="btn-empty_tag" value="empty tag">
+        <input type="button" id="btn-add_class" value="add class">
+        <input type="button" id="btn-remove_class" value="remove class">
+        <input type="button" id="btn-toggle_class" value="toggle class">
+        <input type="button" id="btn-has_class" value="has class">
+        <input type="button" id="btn-css" value="css">
+        <input type="button" id="btn-width" value="width">
+
+        <p id="p1">
+            salam<br>
+            <a href="#" id="link1">Click here</a>
+        </p>
+        <p>P2</p>
+        <p>P3</p>
+    </body>
+</html>
