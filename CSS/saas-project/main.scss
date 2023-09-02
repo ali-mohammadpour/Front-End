@@ -1,0 +1,113 @@
+@import "_variables.css";
+
+@mixin display-flex(){
+    display: flex;
+}
+
+@font-face{
+    font-family: "Vazir-FD";
+    src: url("./fonts/Vazirmatn-FD-Regular.woff2");
+}
+
+html{
+    font-family: "Vazir-FD";
+    font-size: 94.75%;
+}
+
+body{
+    margin: 0;
+    direction: rtl;
+}
+
+.highlight{
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: map-get($colors, main);
+}
+
+.container{
+    @include display-flex();
+    flex: {
+        direction: column;
+        wrap: nowrap;
+    }
+    align-items: center;
+    padding: 3rem 0;
+    box-sizing: border-box;
+}
+
+.introduction{
+    border: $border;
+    background: map-get($colors, second);
+    padding: 2rem;
+    text-align: center;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.introduction p{
+    margin: 0;
+    color: #0d47a1;
+}
+
+.details{
+    border: $border;
+    background: #bbdefb;
+    padding: 1rem;
+    text-align: center;
+    margin: 2rem 0;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.section-header{
+    border-bottom: $border;
+}
+
+.section-header h1{
+    margin: 0 0 1rem 0;
+    color: #0d47a1;
+}
+
+.links{
+    list-style: none;
+    margin: 1rem 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    li{   /* Nested */
+    margin: 0.2rem 0;
+    background: white;
+    }
+}
+
+.links .link{
+    text-decoration: none;
+    color: $main-color;
+    display: block;
+    padding: 0.2rem;
+    border: $border;
+}
+
+.links .link:hover,
+.links .link:active{
+    color: #ffffff;
+    background: $main-color;
+    border-color: $main-color;
+}
+
+@media (min-width: 40rem){
+    html{
+        font-size: 125%;
+    }
+
+    .container{
+        padding: 3rem 0;
+    }
+
+    .introduction,
+    .details{
+        width: 30rem;
+    }
+}

@@ -1,0 +1,36 @@
+.container{
+    margin: 20px;
+    display: grid;
+    height: 300px;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 5rem auto;
+}
+
+@media (max-width: 40rem){
+    .container{
+        grid-template-rows: 5rem auto 100px 150px;
+    }
+}
+
+.box-1{
+    background: rgb(25, 118, 210, 0.5);
+}
+
+.box-2{
+    background: rgb(123, 31, 162, 0.5);
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 2;
+}
+
+.box-3{
+    background: rgb(56, 142, 60, 0.5);
+    grid-column-start: 3;
+    grid-column-end: 5;   /* chera sutune 5 ro ijad nakard? */
+    grid-row-start: 1;
+    grid-row-end: 3;   /* chera radife 3 ro ijad nakard? */
+}
+
+.box-4{
+    background: rgb(81, 45, 168, 0.5);
+}

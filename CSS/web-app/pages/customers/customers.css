@@ -1,0 +1,67 @@
+main{
+    padding-top: 1.1rem;
+}
+
+.testimonial{
+    font-size: 1.25rem;
+    margin: 3rem 0;
+}
+
+.testimonial__image--container{
+    width: 100%;
+    max-width: 550px;
+    min-width: 300px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    transform: skewX(0deg);
+}
+
+.testimonial:first-of-type{
+    margin-left: 0.5rem;
+}
+
+.customer-image{
+    width: 100%;   /* tasvir ro be onvane block dakhele un container darnazar migire. */
+    vertical-align: top;   /* shadow ha birun nemiyofte. */
+}
+
+.testimonial__info{
+    text-align: right;
+    padding: 0.87rem;
+}
+
+#customer-2 .testimonial{
+    text-align: right;
+    margin-right: 0.5rem;
+}
+
+.testimonial__name{
+    margin: 0.18rem;
+    color: #1565c0;
+    font-size: 2rem;
+}
+
+.testimonial__subtitle{
+    margin: 0;
+    font-size: 1.12rem;
+    color: #757575;
+}
+
+.testimonial__text{
+    margin: 0.18rem;
+    color: #212121;
+}
+
+@media (min-width: 40rem){
+    .testimonial{
+        margin: 3rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;   /* baraye behtar pushesh dadane fazaha. */
+    }
+
+    .testimonial__info{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20%;
+    }
+}

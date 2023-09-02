@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+    <!-- HEAD -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/shared.css">
+        <link rel="stylesheet" href="./styles/main.css">
+        <title>Web App</title>
+    </head>
+
+    <!-- BODY -->
+    <body>
+        <div class="backdrop"></div>
+        <div class="modal">
+            <h1 class="modal__title">عنوان</h1>
+            <div class="modal__actions">
+                <a href="./pages/orders/index.html" class="modal__action">ثبت سفارش</a>
+                <button class="modal__action   modal__action--negative">انصراف</button>
+            </div>
+        </div>
+
+        <header class="main-header">   <!-- Header -->
+            <div>
+                <a href="./index.html" class="main-header__logo">Logo</a>   <!-- Left side of header -->
+            </div>
+
+            <nav class="main-nav">   <!-- Right side of header -->
+                <ul class="main-nav__items">
+
+                    <li class="main-nav__item">
+                        <a href="./pages/customers/index.html">مشتریان</a>
+                    </li>
+
+                    <li class="main-nav__item">
+                        <a href="./pages/plans/index.html">تعرفه‌ها</a>
+                    </li>
+
+                    <li class="main-nav__item   main-nav__item--account">
+                        <a href="#">حساب کاربری</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </header>   <!-- End of header -->
+
+        <main>   <!-- Main -->
+            <section id="overview"></section>   <!-- Background photo (trolls-tongue-norway.jpg) -->
+
+            <section id="plans">   <!-- Start of "plans" section -->
+                <h1 class="section-title">تعرفه‌ها</h1>
+                <div class="plan__list">
+
+                    <article class="plan">   <!-- Right side plan -->
+                        <h2 class="plan__title">عضویت ویژه</h2>
+                        <h3 class="plan__price">ماهانه / 79 هزار تومان</h3>
+                        <ul class="plan__features">
+                            <li class="plan__feature">امکانات پلن</li>
+                            <li class="plan__feature">امکانات پلن</li>
+                            <li class="plan__feature">امکانات پلن</li>
+                        </ul>
+                        <div>
+                            <button class="plan__btn">انتخاب</button>
+                        </div>
+                    </article>
+
+                    <article class="plan   plan__highlighted">   <!-- Middle part plan -->
+                        <h2 class="plan__title__highlighted">عضویت ویژه</h2>
+                        <h3 class="plan__price">ماهانه / 79 هزار تومان</h3>
+                        <ul class="plan__features">
+                            <li class="plan__feature">امکانات پلن</li>
+                            <li class="plan__feature">امکانات پلن</li>
+                            <li class="plan__feature">امکانات پلن</li>
+                        </ul>
+                        <div>
+                            <button class="plan__btn">انتخاب</button>
+                        </div>
+                    </article>
+
+                    <article class="plan">   <!-- Left side plan -->
+                        <h2 class="plan__title">عضویت ویژه</h2>
+                        <h3 class="plan__price">ماهانه / 79 هزار تومان</h3>
+                        <ul class="plan__features">
+                            <li class="plan__feature">امکانات پلن</li>
+                            <li class="plan__feature">امکانات پلن</li>
+                            <li class="plan__feature">امکانات پلن</li>
+                        </ul>
+                        <div>
+                            <button class="plan__btn">انتخاب</button>
+                        </div>
+                    </article>
+
+                </div>
+            </section>   <!-- End of "plans" section -->
+
+            <section id="features">   <!-- Start of "features" section -->
+                <h1 class="section-title">ویژگی‌ها</h1>   <!-- Header of features -->
+
+                <ul class="features__list">
+
+                    <li class="features__list--element">   <!-- Right side feature -->
+                        <div class="features__image">
+
+                        </div>
+                        <p class="features__description">
+                            مشخصات
+                        </p>
+                    </li>
+
+                    <li class="features__list--element">   <!-- Middle part feature -->
+                        <div class="features__image">
+
+                        </div>
+                        <p class="features__description">
+                            مشخصات
+                        </p>
+                    </li>
+
+                    <li class="features__list--element">   <!-- Left side feature -->
+                        <div class="features__image">
+
+                        </div>
+                        <p class="features__description">
+                            مشخصات
+                        </p>
+                    </li>
+
+                </ul>
+            </section>   <!-- End of "features" section -->
+        </main>   <!-- End of main -->
+
+            <footer class="main-footer">   <!-- Footer -->
+                <nav>
+                    <ul class="main-footer__links">
+                        <li class="main-footer__link">
+                            <a href="#">تماس</a>
+                        </li>
+                        <li class="main-footer__link">
+                            <a href="./pages/plans/index.html">تعرفه‌ها</a>
+                        </li>
+                    </ul>
+                </nav>
+            </footer>   <!-- End of footer -->
+
+            <script src="./scripts/shared.js"></script>
+    </body>
+</html>

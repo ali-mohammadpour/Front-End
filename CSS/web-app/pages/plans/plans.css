@@ -1,0 +1,82 @@
+main{
+    padding-top: 1.35rem;
+}
+
+.background{
+    background: url("../../images/trolls-tongue-norway.jpg") center/cover no-repeat;
+    filter: grayscale(10%);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+}
+
+.plan{
+    width: 60%;
+    margin: 1rem 0;   /* x: az bala va payin. y: az rast va chap. */
+    /* chera margine plane balayi raft dakhele header va azash fasele nagereft? */
+    border: 2px solid #1565c0;
+    border-left: none;
+    text-align: right;
+    border-radius: 3px;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.plan a{
+    text-decoration: none;
+    color: #0d47a1;
+    display: block;
+    padding: 2rem;
+}
+
+.plan__info{
+    padding: 1rem;
+    border: 1px solid #1e88e5;
+    font-size: 0.93rem;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+.plan__badge{
+    /* chera paddinge tage "a" ruye plan__badge tasir nazasht?
+    /* chera margine badge va title ruye neveshtehaye hamdige raftan? hata ba inke hata block hastan? */
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    font-size: 0.93rem;
+    background: #1e88e5;
+    color: #ffffff;
+    padding: 0.12rem 0.5rem;
+    transform: rotateZ(45deg) translateX(3.5rem) translateY(-2rem);
+    transform-origin: center;
+    width: 12rem;
+    text-align: center;
+}
+
+.clearfix{
+    clear: both;
+    /* baes mishe element hayi ke bala va payon hastan, un faza ro khali darnazar nagiran va ruye ham nayan.
+    darvaghe manande blocki hast ke fazaye makhsuse khodesh ro dare. */
+}
+
+#plus{
+    background: #bbdefb;
+}
+
+#free{
+    background: #e3f2fe;
+    float: right;
+    border-right: none;
+    border-left: 2px solid #1562c0;
+}
+
+#premium{
+    background: #1565c0;
+}
+
+#premium .plan__title{
+    color: #ffffff;
+}

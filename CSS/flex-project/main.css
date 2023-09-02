@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;   /* ? */
+    font-size: 1.1rem;
+}
+
+html{
+    background: #eeeeee;
+    padding: 5px;
+}
+
+body{
+    background: #eeeeee;
+    font-family: sans-serif;
+    color: #1565c0;
+    padding: 5px;
+    margin: 0;
+}
+
+.flex-container{
+    background: #ffffff;
+    padding: 10px;
+    border: 3px solid #1565c0;
+    border-radius: 3px;
+    height: 700px;
+    /* display: inline-flex;   // containere asli ma be onvane yeki az element haye inline dar nazar gerefte mishe. */
+    display: flex;   /* containere asli ma be onvane block dar nazar gerefte mishe. yani block level element. */
+    flex-direction: row;   /* jahate element haye dakhe flex. */
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.box-1{
+    background: #90caf9;
+    padding: 10px;
+    border: 2px solid #1565c0;
+    margin: 10px;
+}
+
+.box-2{
+    background: #90caf9;
+    padding: 10px;
+    border: 2px solid #1565c0;
+    margin: 10px;
+    width: 150px;
+}
+
+.box-3{
+    background: #90caf9;
+    padding: 10px;
+    border: 2px solid #1565c0;
+    margin: 10px;
+    height: 150px;
+    align-self: center;
+}
+
+.box-4{
+    background: #90caf9;
+    padding: 10px;
+    border: 2px solid #1565c0;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.box-5{
+    background: #90caf9;
+    padding: 10px;
+    border: 2px solid #1565c0;
+    margin: 10px;
+    width: 250px;
+    flex-shrink: 1;
+}
+
+.box-6{
+    background: #90caf9;
+    padding: 10px;
+    border: 2px solid #1565c0;
+    margin: 10px;
+    width: 250px;
+    flex-shrink: 4;
+}
